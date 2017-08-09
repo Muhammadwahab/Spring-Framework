@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<bean id="person" class="helloworld.Person">
+
+	<constructor-arg name="name" value="wahab" type="String"></constructor-arg>
+	<constructor-arg name="id" type="int" value="1"></constructor-arg>
+	<property name="textID" value="122"></property>
+	<property name="address" ref="address"></property>
+	</bean>
+
+	<bean id="address" class="helloworld.Address">
+		<constructor-arg name="postalCode" type="int" value="2222"></constructor-arg>
+		<constructor-arg name="streatAddress" type="String"
+			value="wahab">
+		</constructor-arg>
+	</bean>
+</beans>
