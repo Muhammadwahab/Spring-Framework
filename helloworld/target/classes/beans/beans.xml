@@ -5,7 +5,7 @@
 
 
 
-	<bean id="person" class="helloworld.Person">
+	<bean id="person" class="helloworld.Person" scope="prototype">
 
 	<constructor-arg name="name" value="wahab" type="String"></constructor-arg>
 	<constructor-arg name="id" type="int" value="1"></constructor-arg>
@@ -13,7 +13,7 @@
 	<property name="address" ref="address"></property>
 	</bean>
 
-	<bean id="address" class="helloworld.Address">
+	<bean id="address" class="helloworld.Address" scope="singleton">
 		<constructor-arg name="postalCode" type="int" value="2222"></constructor-arg>
 		<constructor-arg name="streatAddress" type="String"
 			value="wahab">
