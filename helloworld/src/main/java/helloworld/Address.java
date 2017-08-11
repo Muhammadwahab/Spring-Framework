@@ -13,7 +13,10 @@ public class Address {
 		return "Address [postalCode=" + postalCode + ", streatAddress=" + streatAddress + "]";
 	}
 	
-	
+	public void  init()
+	{
+		System.out.println("Adrees Class Create  ...");
+	}
 	
 
 }
