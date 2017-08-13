@@ -15,6 +15,16 @@
 	<property name="textID" value="122"></property>
 	<property name="address" ref="address"></property>
 	</bean>
+	
+	<bean id="person1" class="helloworld.Person" scope="singleton"
+		init-method="onCreate" destroy-method="onDestroy"
+		factory-method="FactoryCreate" factory-bean="personFactory">
+
+	<constructor-arg name="name" value="wahab" type="String"></constructor-arg>
+	<constructor-arg name="id" type="int" value="88"></constructor-arg>
+	<property name="textID" value="122"></property>
+	<property name="address" ref="address"></property>
+	</bean>
 
 	<bean id="address" class="helloworld.Address" scope="singleton">
 		<constructor-arg name="postalCode" type="int" value="2222"></constructor-arg>
@@ -22,4 +32,5 @@
 			value="wahab">
 		</constructor-arg>
 	</bean>
+	<bean id="personFactory" class="helloworld.personFactory"></bean>
 </beans>

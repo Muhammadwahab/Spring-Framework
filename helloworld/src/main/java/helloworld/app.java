@@ -11,8 +11,8 @@ public class app {
 		// TODO Auto-generated method stub
 		// spring bean container
 		ApplicationContext context=new ClassPathXmlApplicationContext("beans/beans.xml");
-		Person person=(Person) context.getBean("person");
-		person.speek();
+		//Person person=(Person) context.getBean("person");
+	//	person.speek();
 		
 //		// bean scope check 
 //		Person person2=(Person) context.getBean("person");

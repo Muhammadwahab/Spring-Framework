@@ -28,7 +28,7 @@ public class Person {
 	}
 	public void onCreate()
 	{
-		System.out.println("Person Create in On create Method");
+		System.out.println("Person Create in On create Method"+this);
 	}
 	public void onDestroy()
 	{
