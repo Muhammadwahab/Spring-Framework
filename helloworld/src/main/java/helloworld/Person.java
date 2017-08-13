@@ -9,6 +9,11 @@ public class Person {
 	
 	
 
+	public static Person getinstance(int id,String name)
+	{
+		System.out.println("Person Create USing Factory Mehtod..");
+		return new Person(id,name);
+	}
 	public void setAddress(Address address) {
 		this.address = address;
 	}
@@ -23,7 +28,7 @@ public class Person {
 	}
 	public void onCreate()
 	{
-		System.out.println("Person Create");
+		System.out.println("Person Create in On create Method");
 	}
 	public void onDestroy()
 	{

@@ -7,7 +7,8 @@
 
 
 	<bean id="person" class="helloworld.Person" scope="singleton"
-		init-method="onCreate" destroy-method="onDestroy">
+		init-method="onCreate" destroy-method="onDestroy"
+		factory-method="getinstance">
 
 	<constructor-arg name="name" value="wahab" type="String"></constructor-arg>
 	<constructor-arg name="id" type="int" value="1"></constructor-arg>
