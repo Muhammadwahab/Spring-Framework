@@ -39,4 +39,15 @@
 		p:streatAddress="wahab ka ghar ">
 	</bean>
 	<bean id="personFactory" class="helloworld.personFactory"></bean>
+	<bean id="fruits" class="helloworld.fruitBascket">
+	<constructor-arg value="sardi ke phal"></constructor-arg>
+	<constructor-arg>
+		<list>
+			<value>saib</value>
+			<value>aam</value>
+			<value>khela</value>
+			<value>jamun</value>
+		</list>
+	</constructor-arg>
+	</bean>
 </beans>
