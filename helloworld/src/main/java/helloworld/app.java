@@ -11,6 +11,9 @@ public class app {
 		// TODO Auto-generated method stub
 		// spring bean container
 		ApplicationContext context=new ClassPathXmlApplicationContext("beans/beans.xml");
+		
+	Address adress2=(Address)context.getBean("address2");
+		System.out.println("Adress 2 is "+adress2);
 		//Person person=(Person) context.getBean("person");
 	//	person.speek();
 		

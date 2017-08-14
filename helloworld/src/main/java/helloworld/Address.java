@@ -8,6 +8,27 @@ public class Address {
 		this.postalCode = postalCode;
 		this.streatAddress = streatAddress;
 	}
+	
+	public int getPostalCode() {
+		return postalCode;
+	}
+
+	public void setPostalCode(int postalCode) {
+		this.postalCode = postalCode;
+	}
+
+	public String getStreatAddress() {
+		return streatAddress;
+	}
+
+	public void setStreatAddress(String streatAddress) {
+		this.streatAddress = streatAddress;
+	}
+
+	public Address()
+	{
+		
+	}
 	@Override
 	public String toString() {
 		return "Address [postalCode=" + postalCode + ", streatAddress=" + streatAddress + "]";
