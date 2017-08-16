@@ -50,4 +50,34 @@
 		</list>
 	</constructor-arg>
 	</bean>
+	<bean id="elephant" class="helloworld.Animal">
+
+		
+	<property name="name" value="daizy"></property>
+	<property name="type" value="elephant"></property>
+	</bean>
+		<bean id="loin" class="helloworld.Animal">
+
+		
+	<property name="name" value="jojo"></property>
+	<property name="type" value="loin"></property>
+	</bean>
+		<bean id="snack" class="helloworld.Animal">
+
+		
+	<property name="name" value="momo"></property>
+	<property name="type" value="snack"></property>
+	</bean>
+	
+	
+		<bean id="jungle" class="helloworld.Jungle">
+			<property name="largest" ref="elephant"></property>
+			<property name="listofanimals">
+				<list>
+					<ref bean="snack" />
+					<ref bean="loin" />
+					<ref bean="elephant" />
+				</list>
+			</property>
+		</bean>
 </beans>

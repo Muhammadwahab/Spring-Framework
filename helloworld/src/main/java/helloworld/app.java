@@ -12,8 +12,8 @@ public class app {
 		// spring bean container
 		ApplicationContext context=new ClassPathXmlApplicationContext("beans/beans.xml");
 		
-	fruitBascket bascket=(fruitBascket)context.getBean("fruits");
-		System.out.println("fruit basket is  "+bascket);
+		Jungle bascket=(Jungle)context.getBean("jungle");
+		System.out.println("jangle  is  "+bascket);
 		//Person person=(Person) context.getBean("person");
 	//	person.speek();
 		
