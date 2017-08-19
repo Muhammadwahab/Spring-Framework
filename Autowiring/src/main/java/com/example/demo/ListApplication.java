@@ -13,7 +13,7 @@ public class ListApplication {
 		Logger logger=(Logger)context.getBean("logger");
 		logger.writeConsole("Hi dear in Console");
 		logger.writeFile("Hi dear in File ");
-		System.out.println(logger);
+		//System.out.println(logger);
 		((ClassPathXmlApplicationContext)context).close();
 
 

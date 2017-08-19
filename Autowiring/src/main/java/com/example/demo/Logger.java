@@ -2,18 +2,18 @@ package com.example.demo;
 
 public class Logger {
 	
-	FileWritter fileWritter;
-	ConsoleWritter consoleWritter;
-	public FileWritter getFileWritter() {
+	LogWriter fileWritter;
+	LogWriter consoleWritter;
+	public LogWriter getFileWritter() {
 		return fileWritter;
 	}
-	public void setFileWritter(FileWritter fileWritter) {
+	public void setFileWritter(LogWriter fileWritter) {
 		this.fileWritter = fileWritter;
 	}
-	public ConsoleWritter getConsoleWritter() {
+	public LogWriter getConsoleWritter() {
 		return consoleWritter;
 	}
-	public void setConsoleWritter(ConsoleWritter consoleWritter) {
+	public void setConsoleWritter(LogWriter consoleWritter) {
 		this.consoleWritter = consoleWritter;
 	}
 	@Override
@@ -22,11 +22,11 @@ public class Logger {
 	}
 	public void writeFile(String text)
 	{
-		System.out.println(text);
+	fileWritter.write(text);
 	}
 	public void writeConsole(String text)
 	{
-		System.out.println(text);
+		consoleWritter.write(text);
 	}
 	
 	
