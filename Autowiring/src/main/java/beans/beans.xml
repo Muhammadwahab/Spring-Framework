@@ -11,4 +11,12 @@
 		p:streatAddress="wahab ka ghar " class="com.example.demo.Address">
 	</bean>
 	
+	
+	
+	<bean id="logger" class="com.example.demo.Logger"
+		autowire="byType">
+	</bean>
+	<bean id="filewritter" class="com.example.demo.FileWritter"></bean>
+	
+	<bean id="consolewritter" class="com.example.demo.ConsoleWritter"></bean>
 </beans>

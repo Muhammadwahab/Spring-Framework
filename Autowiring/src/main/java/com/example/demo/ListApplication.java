@@ -10,8 +10,10 @@ public class ListApplication {
 	public static void main(String[] args) {
 		
 		ApplicationContext context=new ClassPathXmlApplicationContext("beans/beans.xml");
-		Address address=(Address)context.getBean("address2");
-		System.out.println(address);
+		Logger logger=(Logger)context.getBean("logger");
+		logger.writeConsole("Hi dear in Console");
+		logger.writeFile("Hi dear in File ");
+		System.out.println(logger);
 		((ClassPathXmlApplicationContext)context).close();
 
 
