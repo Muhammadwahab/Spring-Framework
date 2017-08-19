@@ -14,7 +14,7 @@
 	
 	
 	<bean id="logger" class="com.example.demo.Logger"
-		autowire="byName">
+		autowire="constructor">
 	</bean>
 	<bean id="fileWritter" class="com.example.demo.FileWritter"></bean>
 	
