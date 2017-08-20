@@ -15,11 +15,7 @@
 	
 	
 	
-	<bean id="logger" class="com.example.demo.Logger"
-	>
-	</bean>
-	<bean id="fileWritter" class="com.example.demo.FileWritter"></bean>
 	
-	<bean id="consoleWritter" class="com.example.demo.ConsoleWritter"></bean>
 	<context:annotation-config></context:annotation-config>
+	<context:component-scan base-package="com.example.demo"></context:component-scan>
 </beans>
