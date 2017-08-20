@@ -1,14 +1,18 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Logger {
-	
-	LogWriter fileWritter;
-	LogWriter consoleWritter;
+  //	@Autowired
+	FileWritter fileWritter;
+	//@Autowired
+	ConsoleWritter consoleWritter;
 	
 	
 	public Logger() {
 	
 	}
+	//@Autowired
 	public Logger(FileWritter fileWritter, ConsoleWritter consoleWritter) {
 		this.fileWritter = fileWritter;
 		this.consoleWritter = consoleWritter;
@@ -16,13 +20,15 @@ public class Logger {
 	public LogWriter getFileWritter() {
 		return fileWritter;
 	}
-	public void setFileWritter(LogWriter fileWritter) {
+	@Autowired
+	public void setFileWritter(FileWritter fileWritter) {
 		this.fileWritter = fileWritter;
 	}
 	public LogWriter getConsoleWritter() {
 		return consoleWritter;
 	}
-	public void setConsoleWritter(LogWriter consoleWritter) {
+	@Autowired(required=false)
+	public void setConsoleWritter(ConsoleWritter consoleWritter) {
 		this.consoleWritter = consoleWritter;
 	}
 	@Override
@@ -35,6 +41,7 @@ public class Logger {
 	}
 	public void writeConsole(String text)
 	{
+		if(consoleWritter!=null)
 		consoleWritter.write(text);
 	}
 	
