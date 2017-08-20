@@ -1,5 +1,8 @@
 package com.example.demo;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Logger {
@@ -45,6 +48,18 @@ public class Logger {
 		consoleWritter.write(text);
 	}
 	
+	@PostConstruct
+	public void init ()
+	{
+		System.out.println("init method called");
+		
+	}
+	@PreDestroy
+	public void Destroy ()
+	{
+		System.out.println("Destroy method called");
+		
+	}
 	
 
 }
