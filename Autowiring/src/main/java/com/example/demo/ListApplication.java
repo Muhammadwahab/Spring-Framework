@@ -9,7 +9,7 @@ public class ListApplication {
 
 	public static void main(String[] args) {
 		
-		ApplicationContext context=new ClassPathXmlApplicationContext("bean.xml");
+		ApplicationContext context=new ClassPathXmlApplicationContext("beans/beans.xml");
 		Robot robot=(Robot)context.getBean("robot");
 		robot.speek();
 		
