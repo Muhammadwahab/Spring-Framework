@@ -12,10 +12,16 @@
 	<bean id="address2" p:postalCode="20"
 		p:streatAddress="wahab ka ghar " class="com.example.demo.Address">
 	</bean>
-	
-	
-	
-	
+	<bean id="robot" class="com.example.demo.Robot">
+		
+	<property name="id" value="${user}"></property>
+	<property name="speach" value="${password}"></property>
+	</bean>
+
+
+
 	<context:annotation-config></context:annotation-config>
 	<context:component-scan base-package="com.example.demo"></context:component-scan>
+	
+	<context:property-placeholder location="props/jdbc.properties" />
 </beans>
