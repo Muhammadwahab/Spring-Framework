@@ -14,8 +14,8 @@
 	</bean>
 	<bean id="robot" class="com.example.demo.Robot">
 		
-	<property name="id" value="${user}"></property>
-	<property name="speach" value="${password}"></property>
+	<property name="id" value="${jdbc.user}"></property>
+	<property name="speach" value="${jdbc.password}"></property>
 	</bean>
 
 
@@ -24,4 +24,14 @@
 	<context:component-scan base-package="com.example.demo"></context:component-scan>
 	
 	<context:property-placeholder location="props/jdbc.properties" />
+	
+	<bean id="datasource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driver}"></property>
+	<property name="username" value="${jdbc.user}"></property>
+	<property name="url" value="${jdbc.url}"></property>
+	<property name="password" value="${jdbc.password}"></property>
+	
+	</bean>
 </beans>
